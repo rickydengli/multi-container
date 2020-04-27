@@ -31,7 +31,7 @@ class Fib extends Component {
     for (let key in this.state.values) {
       entries.push(
         <div key={key}>
-          For index {key} I calculated {this.state.values[key]}
+          url: {key} &nbsp; &nbsp; &nbsp; &nbsp; SHA256: {this.state.values[key]}
         </div>
       );
     }
@@ -43,7 +43,7 @@ class Fib extends Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit}>
-          <label>Enter your index:</label>
+          <label>Enter your url:</label>
           <input
             value={this.state.index}
             onChange={event => this.setState({ index: event.target.value })}
@@ -51,7 +51,7 @@ class Fib extends Component {
           <button>Submit</button>
         </form>
 
-        <h3>Calculated Values:</h3>
+        <h3>Hashed URLs:</h3>
         {this.renderValues()}
       </div>
     );
