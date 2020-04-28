@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './App.css';
 
-class Fib extends Component {
+class Hash extends Component {
   state = {
     values: {},
     index: ''
@@ -42,7 +43,7 @@ class Fib extends Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} className="App-form">
           <label>Enter your url:</label>
           <input
             value={this.state.index}
@@ -51,11 +52,11 @@ class Fib extends Component {
           <button>Submit</button>
         </form>
 
-        <h3>Hashed URLs:</h3>
+        <h3 className="App-hashurl">Hashed URLs:</h3>
         {this.renderValues()}
       </div>
     );
   }
 }
 
-export default Fib;
+export default Hash;
