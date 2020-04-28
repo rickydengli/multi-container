@@ -2,8 +2,7 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
-import OtherPage from './OtherPage';
-import Fib from './Fib';
+import Hash from './Hash';
 
 function App() {
   return (
@@ -14,11 +13,9 @@ function App() {
           <p>
           </p>
           <Link to="/">Home</Link>
-          <Link to="/otherpage">Other Page</Link>
         </header>
         <div>
-          <Route exact path="/" component={Fib} />
-          <Route path="/otherpage" component={OtherPage} />
+          <Route exact path="/" component={Hash} />
         </div>
       </div>
     </Router>
